@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Menu from './components/Menu';
 import Specials from './components/Specials';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Map from './components/Map';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -45,7 +47,9 @@ function App() {
       <Gallery />
       {/* Main page content/sections will go here */}
       <main>
-        {/* Contact & map section to be added here */}
+        {/* Contact & map section added below Gallery */}
+        <Contact />
+        <Map />
         {/* Optionally, temporarily keep theme display for debugging:
         <section>
           <p style={{margin: '2rem 0'}}>Current theme: <strong>{theme}</strong></p>
