@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -20,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* Theme toggle remains in the header region for accessibility and convenience */}
+      <header className="App-header" style={{padding: 0, minHeight: 0, background: 'none', boxShadow: 'none'}}>
         <button 
           className="theme-toggle" 
           onClick={toggleTheme}
@@ -28,22 +29,16 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
       </header>
+      {/* Main page content/sections will go here */}
+      {/* Example welcome section or future: <HomepageHero />, etc */}
+      <main>
+        {/* Add your homepage, menu, specials, gallery, and contact sections here */}
+        <section>
+          <p style={{margin: '2rem 0'}}>Current theme: <strong>{theme}</strong></p>
+        </section>
+      </main>
     </div>
   );
 }
