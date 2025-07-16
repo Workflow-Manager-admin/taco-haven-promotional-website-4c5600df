@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Menu from './components/Menu';
 import Specials from './components/Specials';
+import Gallery from './components/Gallery';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -40,9 +41,11 @@ function App() {
       <Menu />
       {/* Specials promotions section below menu */}
       <Specials />
+      {/* Gallery section for photo highlights */}
+      <Gallery />
       {/* Main page content/sections will go here */}
       <main>
-        {/* Add your gallery, and contact sections here */}
+        {/* Contact & map section to be added here */}
         {/* Optionally, temporarily keep theme display for debugging:
         <section>
           <p style={{margin: '2rem 0'}}>Current theme: <strong>{theme}</strong></p>
