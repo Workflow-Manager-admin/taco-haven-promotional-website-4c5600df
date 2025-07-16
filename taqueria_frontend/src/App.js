@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
+
 // PUBLIC_INTERFACE
 function App() {
   const [theme, setTheme] = useState('light');
