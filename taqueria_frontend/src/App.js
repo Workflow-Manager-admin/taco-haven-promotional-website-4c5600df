@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Hero from './components/Hero';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -31,8 +32,9 @@ function App() {
         </button>
         <Header />
       </header>
+      {/* Hero section for homepage visual impact */}
+      <Hero />
       {/* Main page content/sections will go here */}
-      {/* Example welcome section or future: <HomepageHero />, etc */}
       <main>
         {/* Add your homepage, menu, specials, gallery, and contact sections here */}
         <section>
