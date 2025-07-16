@@ -1,0 +1,101 @@
+.gallery-section {
+  background: var(--color-bg-card, #fff);
+  border-radius: 22px;
+  box-shadow: 0 4px 18px 0 rgba(215,38,61,.10);
+  margin: 2.3rem auto 2rem auto;
+  padding: 2.2rem 1.4rem 2.3rem 1.4rem;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2.1rem;
+  color: var(--color-primary, #D7263D);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: -.4px;
+}
+
+.gallery-description {
+  color: var(--color-accent, #181818);
+  opacity: 0.87;
+  font-size: 1.10rem;
+  margin-bottom: 29px;
+  font-weight: 500;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 22px;
+  justify-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.gallery-img-container {
+  background: var(--color-secondary, #f7f7f7);
+  border-radius: 17px;
+  box-shadow: 0 4px 14px 0 rgba(215,38,61,.09);
+  overflow: hidden;
+  transition: transform 0.20s, box-shadow 0.20s;
+  width: 100%;
+  min-width: 180px;
+  max-width: 350px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery-img-container:hover,
+.gallery-img-container:focus-within {
+  transform: translateY(-5px) scale(1.025);
+  box-shadow: 0 8px 36px 0 rgba(215,38,61,.17);
+  z-index: 2;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.15s;
+}
+
+.gallery-img-container:hover .gallery-img,
+.gallery-img-container:focus-within .gallery-img {
+  filter: brightness(0.95) saturate(1.09);
+}
+
+@media (max-width: 950px) {
+  .gallery-section {
+    padding: 1.1rem 0.4rem 1.2rem 0.4rem;
+    border-radius: 13px;
+  }
+  .gallery-grid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    margin: 1.19rem 2vw 1.05rem 2vw;
+    padding: 0.62rem 0.1rem 1.07rem 0.1rem;
+    border-radius: 8px;
+  }
+  .gallery-grid {
+    gap: 8px;
+  }
+  .gallery-title {
+    font-size: 1.28rem;
+  }
+  .gallery-img-container {
+    border-radius: 8px;
+    min-width: 110px;
+    max-width: 99vw;
+    aspect-ratio: 4/3;
+  }
+}
