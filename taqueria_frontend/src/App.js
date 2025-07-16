@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Menu from './components/Menu';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -34,12 +35,16 @@ function App() {
       </header>
       {/* Hero section for homepage visual impact */}
       <Hero />
+      {/* Menu section with taco grid */}
+      <Menu />
       {/* Main page content/sections will go here */}
       <main>
-        {/* Add your homepage, menu, specials, gallery, and contact sections here */}
+        {/* Add your specials, gallery, and contact sections here */}
+        {/* Optionally, temporarily keep theme display for debugging:
         <section>
           <p style={{margin: '2rem 0'}}>Current theme: <strong>{theme}</strong></p>
         </section>
+        */}
       </main>
     </div>
   );
