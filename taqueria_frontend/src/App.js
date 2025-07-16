@@ -7,6 +7,7 @@ import Specials from './components/Specials';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Map from './components/Map';
+import Footer from './components/Footer';
 
 // The App component serves as root for modular sections - future main sections will be imported from ./components and ./pages
 
@@ -56,6 +57,8 @@ function App() {
         </section>
         */}
       </main>
+      {/* Footer displays taqueria info, social, and secondary nav */}
+      <Footer />
     </div>
   );
 }
