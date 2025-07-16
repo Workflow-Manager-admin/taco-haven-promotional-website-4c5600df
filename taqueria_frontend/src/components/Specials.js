@@ -1,5 +1,6 @@
 import React from 'react';
 import './Specials.css';
+import Card from './Card';
 
 /**
  * Specials section for current promotions or special offers.
@@ -48,7 +49,7 @@ function Specials() {
       </p>
       <div className="specials-grid">
         {specials.map((special) => (
-          <div className="specials-card" key={special.id}>
+          <Card className="specials-card" key={special.id}>
             <div className="specials-img-box">
               <img
                 src={special.image}
@@ -64,7 +65,7 @@ function Specials() {
               <h3 className="specials-item-title">{special.title}</h3>
               <p className="specials-item-description">{special.description}</p>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Menu.css';
+import Card from './Card';
+import Tag from './Tag';
 
 /**
  * Menu section for the Taqueria homepage.
@@ -63,7 +65,7 @@ function Menu() {
       </p>
       <div className="menu-grid">
         {menuItems.map(item => (
-          <div className="menu-card" key={item.id}>
+          <Card className="menu-card" key={item.id}>
             <div className="menu-img-box">
               <img
                 src={item.img}
@@ -80,12 +82,12 @@ function Menu() {
               {item.tags && item.tags.length > 0 && (
                 <div className="menu-tags">
                   {item.tags.map(tag => (
-                    <span className="menu-tag" key={tag}>{tag}</span>
+                    <Tag key={tag}>{tag}</Tag>
                   ))}
                 </div>
               )}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

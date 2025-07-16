@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import Button from './Button';
+import Card from './Card';
 
 /**
  * Contact form allowing visitors to send inquiries.
@@ -26,7 +28,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact-section card" id="contact" tabIndex={-1}>
+    <Card className="contact-section" id="contact" tabIndex={-1}>
       <h2 className="contact-title">Contact Us</h2>
       <p className="contact-description">
         Got questions, feedback, or want to place a special order? We&apos;d love to hear from you!
@@ -70,16 +72,16 @@ function Contact() {
             rows={4}
           ></textarea>
         </div>
-        <button className="btn" type="submit" disabled={submitted}>
+        <Button type="submit" disabled={submitted} style={{ width:'100%', marginTop:7, borderRadius:10, fontWeight:800, fontSize:'1.14rem' }}>
           {submitted ? 'Message Sent!' : 'Send Message'}
-        </button>
+        </Button>
         {submitted && (
           <div className="contact-thankyou">
             Thank you! We&apos;ll be in touch soon.
           </div>
         )}
       </form>
-    </section>
+    </Card>
   );
 }
 
